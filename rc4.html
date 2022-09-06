@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body{
+            background-color: aquamarine;
+        }
+
+        .container{
+            margin: 250px auto;
+            width: 1000px;
+            text-align: center;
+            font-size: 20px;
+            background-color: aqua;
+            color: black;
+        }
+
+        .sonuc{
+            display: inline-block;
+        }
+
+        .ciphertext{
+            display: inline-block;
+        }
+
+        .sol{
+            float: left;
+            width: 25%;
+        }
+
+        .sag{
+            float: right;
+            width: 75%;
+            position: relative;
+            bottom: 25px;
+        }
+
+        .buton{
+            margin-top: 20px;
+            font-size: 20px;
+            background-color: white;
+            color: #03a9fc;
+            border: 1px solid #03a9fc;
+            transition: all .5s ease;
+        }
+
+        .buton:hover{
+            background-color: #03a9fc;
+            color: white;
+            border: 1px solid white;
+            cursor: pointer;
+        }
+
+        .basarisiz{
+            background-color: #fcad03;
+            border: 2px solid blue;
+            border-radius: 5px;
+        }
+
+        .basarili{
+            background-color: #03fc24;
+            border: 2px solid blue;
+            border-radius: 5px;
+        }
+
+        .duyuru{
+            margin-bottom: 20px;
+            font-size: 30px;
+        }
+
+        .clearfix::after{
+            content: none;
+            display: none;
+            clear: both;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container clearfix">
+
+        <div class="duyuru basarili">
+            Bir anahtar ve şifrelenecek metin giriniz.
+        </div>
+
+        
+        <label class="sol" for="key">Anahtar: </label>
+        <input class="sag" type="text" id="key">
+    
+        <label class="sol" for="plaintext">Metin: </label>
+        <input class="sag" type="text" id="plaintext">
+    
+        <label class="sol" for="sonuc">Sonuc: </label>
+        <input class="sag" type="text" id="sonuc" readonly>
+        
+        <button class="buton sag" type="button">Şifrele</button>
+        
+        
+ 
+    </div>
+
+    
+    <script src="rc4.js"></script>
+
+    
+</body>
+
+</html>
